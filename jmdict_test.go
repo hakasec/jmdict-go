@@ -10,7 +10,7 @@ func TestRead(t *testing.T) {
 	if err != nil {
 		t.Error(err)
 	}
-	dict := Load(file)
+	dict, err := Load(file)
 	if dict == nil {
 		t.Error("dict is nil!\n")
 	} else if dict.Entries == nil {
